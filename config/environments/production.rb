@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "Portfolio_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { :host => 'secure-harbor-91949.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://secure-harbor-91949.herokuapp.com' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :smtp

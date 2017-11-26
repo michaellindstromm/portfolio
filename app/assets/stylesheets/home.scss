@@ -1,6 +1,9 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary: #1b2556;
+$secondary: #fc7a70;
+
 body {
   color: black;
 }
@@ -42,4 +45,12 @@ font-size: .8em;
 
 .hidden {
     display: none;
+}
+
+.navbar-brand {
+    width: 5%;
+}
+
+header.navbar {
+    background-color: $primary; 
 }

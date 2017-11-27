@@ -29,17 +29,22 @@ $(window).scroll(function() {
         $('.navbar').addClass('transparent-nav');
     }
 
-    // if ($('.dropdown-menu').offset().top > 665) {
-    //     $('.dropdown-menu').css({ "background-color":"#1b2556" });
-    // } else {
-    //     $('.dropdown-menu').css({ "background-color": "transparent" });
-    // }
 });
 
-// $('.navbar').on('click', function(e) {
-//     $('.navbar').css({ "background-color": "#1b2556" });
-//     $('.dropdown-menu').css({ "background-color": "#1b2556" });
-// });
+function load() {
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#jumbo-name').removeClass('hideme');
+            $('#jumbo-name').addClass('jumbo-name');
+
+        }, 1000);
+        
+        setTimeout(function() {
+            $('#jumbo-phrase').removeClass('hideme');
+            $('#jumbo-phrase').addClass('jumbo-phrase');
+        }, 3000);
+    });
+}
 
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
@@ -49,7 +54,7 @@ function smoothScroll() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: target.offset().top - 150
+                    scrollTop: target.offset().top - 200
                 }, 1000);
                 return false;
             }
@@ -58,6 +63,7 @@ function smoothScroll() {
 }
 
 setTimeout(smoothScroll, 500);
+load();
 
 
 

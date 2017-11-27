@@ -1,24 +1,35 @@
 <div class="jumbotron jumbotron-fluid paral jumbotron1">
-  <div class="container jumbo-content">
-        <h1 class="display-1 text-white text-center mt-4">Michae Lindstrom</h1>
+  <div class="container jumbo-content mt-4">
+        <h1 class="display-1 text-white text-center mt-4 hideme" id="jumbo-name">Michael Lindstrom</h1>
+        <h3 class="text-white text-center hideme" id="jumbo-phrase">Front-end | Back-end | All the ends</h3>
   </div>
 </div>
 
-
-<div class="pb-4 heading-div mx-auto">
-    <h2 class="display-3 text-center mx-auto">About</h2>
-</div>
-<div class="container about" id="about" data-anchor-offset="100">
-    <div class="row">
-        <%= link_to image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/portfolio_photo.png", alt: "logo", height: '100%', width: '100%'), '/', class: 'mx-auto' %>
+<div class="about-section section w-100">
+    <div class="pb-4 heading-div mx-auto">
+        <h2 class="display-3 text-center">About</h2>
     </div>
-    <div class="row container">
-        <div class="col-lg-12">
-            <p>I like to eat eat eat opples and bononos.</p>
-            <p>I like to eat eat eat opples and bononos.</p>
-            <p>I like to eat eat eat opples and bononos.</p>
-            <p>I like to eat eat eat opples and bononos.</p>
-            <p>I like to eat eat eat opples and bononos.</p>
+    <div class="container-fluid about" id="about">
+        <div class="row m-0">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="row mx-auto">
+                    <div class="text-center">
+                        <%= link_to image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/portfolio_photo.png", alt: "logo", height: '100%', width: '95%'), '/' %>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col-lg-12 mx-auto">
+                        <div class="text-justify">
+                            <p>Hello there! If you were wondering who Michael Lindstrom was, well here's a face for the name. I am a recent graduate from the Nashville Software School, a full-stack 6 month development bootcamp.</p>
+                            <p>Also, if you were curious what all the crazy salmon colored lines were about, they are from a little side project I did using some pretty neat concepts. Check it out below!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="push-lg-3">
+            </div>
         </div>
     </div>
 </div>
@@ -29,134 +40,141 @@
   </div>
 </div>
 
-<div class="pb-4 heading-div mx-auto">
-    <h2 class="display-3 text-center mx-auto">Projects</h2>
+<div class="project-section section">
+    <div class="pb-4 heading-div mx-auto">
+        <h2 class="display-3 text-center mx-auto">Projects</h2>
+    </div>
+    <div class="container projects mt-4" id="projects">
+        <div class="card" id="banagazon">
+            <div class="row">
+                <div class="col-lg-6 project-oppo">
+                
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4>Banagazon</h4>
+                            <p>Stuff about our banagazon site.<p>
+                            <a>Link to site</a> | 
+                            <a>Link to repo</a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" id="brews_clues">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4>Brews Clues</h4>
+                            <p>Stuff about brews clues site.<p>
+                            <a>Link to site</a> | 
+                            <a>Link to repo</a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 project-oppo">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" id="flowground">
+            <div class="row">
+                <div class="col-lg-6 project-oppo">
+                
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4>Banagazon</h4>
+                            <p>Stuff about our banagazon site.<p>
+                            <a>Link to site</a> | 
+                            <a>Link to repo</a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" id="maze_runner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4>Brews Clues</h4>
+                            <p>Stuff about brews clues site.<p>
+                            <a>Link to site</a> | 
+                            <a>Link to repo</a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 project-oppo">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" id="squeasy">
+            <div class="row">
+                <div class="col-lg-6 project-oppo">
+                
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4>Banagazon</h4>
+                            <p>Stuff about our banagazon site.<p>
+                            <a>Link to site</a> | 
+                            <a>Link to repo</a>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-<div class=" container projects mt-4" id="projects">
-    <div class="card" id="banagazon">
-        <div class="row">
-            <div class="col-lg-6">
-            
+
+
+<div class="contact-section section pb-2">
+    <div class="heading-div mx-auto">
+        <h2 class="display-3 text-center mx-auto">Contact</h2>
+    </div>
+    <div class="container">
+        <div class="contact-statemtent my-4 text-center">
+            <a href="mailto:michaellindstr@gmail.com" class="email-link">michaellindstr@gmail.com</a>
+            <div class="social-logos py-2">
+                <%= link_to image_tag("githublogo.png", alt: "github", height: '50px', width: '50px'), 'https://github.com/michaellindstromm', class: 'navbar-brand' %>
+                <%= link_to image_tag("linkedinlogo.png", alt: "github", height: '38px', width: '38px'), 'https://www.linkedin.com/in/michaelglindstrom', class: 'navbar-brand' %>
             </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4>Banagazon</h4>
-                        <p>Stuff about our banagazon site.<p>
-                        <a>Link to site</a> | 
-                        <a>Link to repo</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                    </div>
-                </div>
-            </div>
+            <h5>Email me, get in contact through one of the links above, or send me a message below.</h5>
         </div>
-    </div>
-
-
-    <div class="card" id="brews_clues">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4>Brews Clues</h4>
-                        <p>Stuff about brews clues site.<p>
-                        <a>Link to site</a> | 
-                        <a>Link to repo</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-
-            </div>
+        <div id="contact">
+            <%= render 'contact_form' %>
         </div>
-    </div>
-
-
-    <div class="card" id="flowground">
-        <div class="row">
-            <div class="col-lg-6">
-            
-            </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4>Banagazon</h4>
-                        <p>Stuff about our banagazon site.<p>
-                        <a>Link to site</a> | 
-                        <a>Link to repo</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card" id="maze_runner">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4>Brews Clues</h4>
-                        <p>Stuff about brews clues site.<p>
-                        <a>Link to site</a> | 
-                        <a>Link to repo</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card" id="squeasy">
-        <div class="row">
-            <div class="col-lg-6">
-            
-            </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h4>Banagazon</h4>
-                        <p>Stuff about our banagazon site.<p>
-                        <a>Link to site</a> | 
-                        <a>Link to repo</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-
-
-<div class="pb-4 heading-div mx-auto">
-    <h2 class="display-3 text-center mx-auto">Contact</h2>
-</div>
-<div class="container">
-    <div class="contact-statemtent my-4 text-center">
-        <p>Send me a message, or get in contact with me through one of the links below.</p>
-    </div>
-    <div id="contact">
-        <%= render 'contact_form' %>
     </div>
 </div>

@@ -14,6 +14,50 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop() > 735 && $(this).scrollTop() < 1575) {
+        $('.navbar').removeClass('transparent-nav');
+        $('.navbar').addClass('colored-nav');
+    } else if ($(this).scrollTop() > 2310) {
+        $('.navbar').removeClass('transparent-nav');
+        $('.navbar').addClass('colored-nav');
+    } else {
+        $('.navbar').removeClass('colored-nav');
+        $('.navbar').addClass('transparent-nav');
+    }
+
+    // if ($('.dropdown-menu').offset().top > 665) {
+    //     $('.dropdown-menu').css({ "background-color":"#1b2556" });
+    // } else {
+    //     $('.dropdown-menu').css({ "background-color": "transparent" });
+    // }
+});
+
+// $('.navbar').on('click', function(e) {
+//     $('.navbar').css({ "background-color": "#1b2556" });
+//     $('.dropdown-menu').css({ "background-color": "#1b2556" });
+// });
+
+function smoothScroll() {
+    $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
+        console.log('hello');
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 150
+                }, 1000);
+                return false;
+            }
+        }
+    });
+}
+
+setTimeout(smoothScroll, 500);
+
+
 

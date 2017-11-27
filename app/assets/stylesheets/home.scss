@@ -2,15 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $primary: #1b2556;
+$primary-light-accent: #293364;
+$primary-dark-accent: #141D4C;
+
 $secondary: #fc7a70;
+$secondary-light-accent: #FF968E;
+$secondary-dark-accent: #FF6C61;
 
 body {
   color: black;
+  position: relative;
 }
+
+.display-3 {
+    border-bottom: 2px solid black;
+}
+
+.heading-div {
+    width: 20%;
+}
+
 .contact-form-text-area {
   color: black;
 }
-.hidden { display: none; }
+
+.contact-submit {
+    border-color: $primary-light-accent;
+}
+
+.contact-submit:hover {
+    border-color: $primary-dark-accent;
+}
+
+.contact-submit:focus {
+    outline: 0;
+}
+
+.hidden { 
+    display: none; 
+}
 .alert-error {
 background-color: #f2dede;
 border-color: #eed3d7;
@@ -43,6 +73,16 @@ text-align: left;
 font-size: .8em;
 }
 
+.transparent-nav {
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+
+.colored-nav {
+    background-color: $primary;
+    transition: all .5s ease-in-out;
+}
+
 .hidden {
     display: none;
 }
@@ -53,6 +93,37 @@ font-size: .8em;
     padding: 0;
 }
 
-header.navbar {
-    background-color: $primary; 
+.nav-item {
+    margin-right: 5rem;
+}
+
+.jumbotron1 {
+    background-image: url("jumbo.png");
+}
+
+.jumbotron2 {
+    background-image: url("jumbo2.png");
+}
+
+.card {
+    margin-bottom: 5rem;
+    border: none;
+}
+
+.footer {
+    background-color: $primary;
+}
+
+a.anchor {
+  display: block; 
+  position: relative; 
+  top: -50px; 
+  visibility: hidden; 
+}
+
+.paral {
+min-height: 800px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
 }

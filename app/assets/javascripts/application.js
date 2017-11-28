@@ -14,7 +14,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require jquery-ui
 //= require_tree .
 
 $(window).scroll(function() {

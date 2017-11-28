@@ -14,6 +14,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require jquery-ui
 //= require_tree .
 
 $(window).scroll(function() {
@@ -40,33 +41,70 @@ $(window).scroll(function() {
         $('#jumbo2-saying').addClass('jumbo-phrase');
         $('#jumbo2-horizontal').addClass('jumbo-phrase');
         $('#jumbo2-quoter').addClass('jumbo-phrase');
-        
+    }
+
+    if ($(this).scrollTop() > $('.jumbotron').offset().top + ($('.jumbotron').height() - $('.jumbotron').height() * .5)) {
+
     }
 
 });
 
-function load() {
-    $(window).on('load', function() {
+$(window).on('load', function() {
 
-        $('body').addClass('fade-in');
+    setTimeout(function() {
 
+        $(".test-holder-image").fadeOut(2000);
+
+        $(".test-holder-div").addClass("no-height");
+        
+        
+        setTimeout(function() {
+            $(".test-holder-image").hide();
+            $(".nav-logo").fadeIn(2000);
+        }, 1500);
+        
         setTimeout(function() {
             $('#jumbo-name').removeClass('hideme');
             $('#jumbo-name').addClass('jumbo-name');
-
-        }, 1000);
+        }, 3000);
         
         setTimeout(function() {
             $('#jumbo-horizontal').removeClass('hideme');
             $('#jumbo-horizontal').addClass('jumbo-phrase');
-        }, 2500);
 
-        setTimeout(function() {
             $('#jumbo-phrase').removeClass('hideme');
             $('#jumbo-phrase').addClass('jumbo-phrase');
-        }, 4000);
+        }, 4500);
+
+        setTimeout(function() {
+            $('body').removeClass('stop-scrolling');
+            $('body').unbind('touchmove')
+            $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .5)}, 2000);
+        }, 6000);
+
+    }, 1000);
+
+});
+
+
+function ready() {
+    $(document).ready(function() {
+
+        $('body').bind('touchmove', function (e) { e.preventDefault() })
+        
+        $(".nav-logo").hide();
+        $(".test-holder-div").hide();
+        $(".test-holder-image").hide();
+        
+        $(".test-holder-div").show();
+        $(".test-holder-image").show();
+
+        $(this).scrollTop(0);
+
     });
 }
+
+
 
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
@@ -86,8 +124,8 @@ function smoothScroll() {
     });
 }
 
-setTimeout(smoothScroll, 500);
-load();
+setTimeout(smoothScroll, 0);
+ready();
 
 
 

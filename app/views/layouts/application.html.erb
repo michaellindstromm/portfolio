@@ -8,8 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="mb-0" data-spy="scroll" data-target="#navbar" data-offset="300">
+  <body class="mb-0 stop-scrolling" data-spy="scroll" data-target="#navbar" data-offset="300">
       <%= render 'shared/header' %>
+      <div class="test-holder-div d-flex align-items-center justify-content-center mx-auto">
+          <%= image_tag("logo.png", alt: "logo", height: "100px", width: "100px", class: "test-holder-image") %>
+      </div>
       <%= yield %>
   </body>
 </html>

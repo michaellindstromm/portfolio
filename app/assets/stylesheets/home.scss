@@ -112,7 +112,7 @@ font-size: .8em;
 
 .nav-item > a.active {
     border-radius: 3px;
-    background-color: $secondary-light-accent;
+    background-color: $secondary;
 }
 
 .jumbotron1 {
@@ -169,4 +169,23 @@ hr {
 
 .footer {
     background-color: $primary;
+}
+
+.test-holder-div {
+    z-index: 1001;
+    background: white;
+    height: 100vh;
+    width: 100vh;
+}
+
+.no-height {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    transition: all 2s ease-in-out;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

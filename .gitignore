@@ -23,3 +23,7 @@
 .byebug_history
 
 .env
+
+/app/assets/images/jumbo.png
+/app/assets/images/jumbo2.png
+/app/assets/images/Portfolio_Picture.png

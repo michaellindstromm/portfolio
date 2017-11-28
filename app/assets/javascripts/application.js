@@ -23,7 +23,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.about-section').offset().top - navbarHeight * 2 && $(this).scrollTop() < $('.jumbotron2').offset().top) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
-    } else if ($(this).scrollTop() > $('.project-section').offset().top - navbarHeight * 1.5) {
+    } else if ($(this).scrollTop() > $('.project-section').offset().top - navbarHeight * 1.4) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
     } else {

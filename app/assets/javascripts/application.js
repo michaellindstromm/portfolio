@@ -20,30 +20,12 @@ $(window).scroll(function() {
 
     var navbarHeight = $('#navbar').height();
 
-    if ($(this).scrollTop() > $('.about-section').offset().top - navbarHeight * 2 && $(this).scrollTop() < $('.jumbotron2').offset().top) {
-        $('.navbar').removeClass('transparent-nav');
-        $('.navbar').addClass('colored-nav');
-    } else if ($(this).scrollTop() > $('.project-section').offset().top - navbarHeight * 1.4) {
+    if ($(this).scrollTop() > $('.about-section').offset().top - navbarHeight * 2) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
     } else {
         $('.navbar').removeClass('colored-nav');
         $('.navbar').addClass('transparent-nav');
-    }
-    
-    if ($(this).scrollTop() > $('.about-section').offset().top + ($('.about-section').height() - $('.about-section').height() * .25)) {
-
-        $('#jumbo2-saying').removeClass('hideme');
-        $('#jumbo2-horizontal').removeClass('hideme');
-        $('#jumbo2-quoter').removeClass('hideme');
-    
-        $('#jumbo2-saying').addClass('jumbo-phrase');
-        $('#jumbo2-horizontal').addClass('jumbo-phrase');
-        $('#jumbo2-quoter').addClass('jumbo-phrase');
-    }
-
-    if ($(this).scrollTop() > $('.jumbotron').offset().top + ($('.jumbotron').height() - $('.jumbotron').height() * .5)) {
-
     }
 
 });
@@ -116,12 +98,16 @@ function smoothScroll() {
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top - 200
-                }, 1000);
+                }, 2000);
                 return false;
             }
         }
     });
 }
+
+// $('.about-down').on('click', function() {
+//     $('html, body').animate({ scrollTop: $('.project-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .5) }, 2000);
+// });
 
 setTimeout(smoothScroll, 0);
 ready();

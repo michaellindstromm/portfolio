@@ -18,10 +18,12 @@
 
 $(window).scroll(function() {
 
-    if ($(this).scrollTop() > 735 && $(this).scrollTop() < 1575) {
+    console.log($(this).scrollTop());
+
+    if ($(this).scrollTop() > 735 && $(this).scrollTop() < 1490) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
-    } else if ($(this).scrollTop() > 2310) {
+    } else if ($(this).scrollTop() > 2050) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
     } else {
@@ -32,7 +34,7 @@ $(window).scroll(function() {
 });
 
 function load() {
-    $(document).ready(function() {
+    $(window).on('load', function() {
         setTimeout(function() {
             $('#jumbo-name').removeClass('hideme');
             $('#jumbo-name').addClass('jumbo-name');
@@ -48,7 +50,6 @@ function load() {
 
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
-        console.log('hello');
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');

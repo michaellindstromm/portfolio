@@ -31,7 +31,7 @@ $(window).scroll(function() {
         $('.navbar').addClass('transparent-nav');
     }
     
-    if ($(this).scrollTop() > 1250) {
+    if ($(this).scrollTop() > $('.about-section').offset().top + ($('.about-section').height() - $('.about-section').height() * .25)) {
 
         $('#jumbo2-saying').removeClass('hideme');
         $('#jumbo2-horizontal').removeClass('hideme');
@@ -70,9 +70,12 @@ function load() {
 
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
+
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top - 200

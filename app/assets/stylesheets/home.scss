@@ -9,7 +9,7 @@ $secondary: #fc7a70;
 $secondary-light-accent: #FF968E;
 $secondary-dark-accent: #FF6C61;
 
-$background-offset: rgb(230, 230, 230);
+$background-offset: rgb(244, 244, 244);
 
 body {
   color: black;
@@ -101,7 +101,7 @@ font-size: .8em;
 }
 
 .navbar-brand {
-    width: 80px;
+    width: 50px;
     margin: 0;
     padding: 0;
 }
@@ -111,7 +111,6 @@ font-size: .8em;
 }
 
 .nav-item > a.active {
-    border-radius: 3px;
     background-color: $secondary;
 }
 
@@ -188,4 +187,17 @@ hr {
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+
+.project-section {
+    background-color: $background-offset;
+}
+
+// .carousel-item1-image-div {
+//     background: url("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png");
+//     background-size: cover;
+// }
+
+.flash-div {
+    min-height: 100px;
 }

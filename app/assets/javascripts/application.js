@@ -20,7 +20,7 @@ $(window).scroll(function() {
 
     var navbarHeight = $('#navbar').height();
 
-    if ($(this).scrollTop() > $('.about-section').offset().top - navbarHeight * 2) {
+    if ($(this).scrollTop() > $('.about-section').offset().top - navbarHeight * 3) {
         $('.navbar').removeClass('transparent-nav');
         $('.navbar').addClass('colored-nav');
     } else {
@@ -41,6 +41,7 @@ $(window).on('load', function() {
         
         setTimeout(function() {
             $(".test-holder-image").hide();
+
             $(".nav-logo").fadeIn(2000);
         }, 1500);
         
@@ -58,10 +59,15 @@ $(window).on('load', function() {
         }, 4500);
 
         setTimeout(function() {
-            $('body').removeClass('stop-scrolling');
+            // $('body').removeClass('stop-scrolling');
             $('body').unbind('touchmove')
-            $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .5)}, 2000);
+            $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6)}, 2000);
         }, 6000);
+
+        setTimeout(function() {
+            $('.jumbo-arrow').removeClass('hideme');
+            $('.jumbo-arrow').addClass('jumbo-phrase');
+        }, 8000)
 
     }, 1000);
 
@@ -76,6 +82,7 @@ function ready() {
         $(".nav-logo").hide();
         $(".test-holder-div").hide();
         $(".test-holder-image").hide();
+
         
         $(".test-holder-div").show();
         $(".test-holder-image").show();
@@ -90,18 +97,31 @@ function ready() {
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
 
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
 
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target[0]["id"] == "about") {
 
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top - 200
-                }, 2000);
-                return false;
-            }
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 218
+            }, 2000);
+            return false;
+
+        } else if (target[0]["id"] == "contact") {
+
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 350
+            }, 2000);
+            return false;
+            
+        } else {
+            
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 235
+            }, 2000);
+            return false;
+
         }
+
     });
 }
 

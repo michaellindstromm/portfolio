@@ -1,8 +1,9 @@
-<div class="jumbotron jumbotron-fluid paral jumbotron1">
-  <div class="container jumbo-content mt-4">
-        <h1 class="display-1 text-white text-center mt-4 hideme" id="jumbo-name">Michael Lindstrom</h1>
+<div class="jumbotron jumbotron-fluid paral jumbotron1 d-flex align-items-center">
+    <div class="container jumbo-content">
+        <h1 class="display-1 text-white text-center hideme" id="jumbo-name">Michael Lindstrom</h1>
+        <hr class="mx-auto hideme" id="jumbo-horizontal">
         <h3 class="text-white text-center hideme" id="jumbo-phrase">Front-end | Back-end | All the ends</h3>
-  </div>
+    </div>
 </div>
 
 <div class="about-section section w-100">
@@ -34,23 +35,25 @@
     </div>
 </div>
 
-<div class="jumbotron jumbotron-fluid paral jumbotron2">
+<div class="jumbotron jumbotron-fluid paral jumbotron2 d-flex align-items-center mb-0">
   <div class="container jumbo-content">
-        
+        <h3 class="text-white text-center mt-4 hideme" id="jumbo2-saying">"Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."</h3>
+        <hr class="mx-auto hideme" id="jumbo2-horizontal">
+        <h4 class="text-white text-center hideme" id="jumbo2-quoter">- Linus Torvald</h4>
   </div>
 </div>
 
-<div class="project-section section">
+<div class="project-section section ml-0 mr-0 py-4 bg-dark">
     <div class="pb-4 heading-div mx-auto">
-        <h2 class="display-3 text-center mx-auto">Projects</h2>
+        <h2 class="display-3 text-center mx-auto text-white">Projects</h2>
     </div>
-    <div class="container projects mt-4" id="projects">
+    <div class="container-fluid projects mt-4" id="projects">
         <div class="card" id="banagazon">
             <div class="row">
-                <div class="col-lg-6 project-oppo">
+                <div class="col-lg-4 project-oppo">
                 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-8 push-lg-4">
                     <div class="row">
                         <div class="col-lg-8">
                             <h4>Banagazon</h4>
@@ -69,21 +72,21 @@
 
         <div class="card" id="brews_clues">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-8">
+                <div class="col-lg-8 pull-lg-4">
+                    <div class="row d-flex">
+                        <div class="col-lg-8 pull-lg-4">
                             <h4>Brews Clues</h4>
                             <p>Stuff about brews clues site.<p>
                             <a>Link to site</a> | 
                             <a>Link to repo</a>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 push-lg-8">
                             <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 project-oppo">
+                <div class="col-lg-4 project-oppo">
 
                 </div>
             </div>
@@ -92,10 +95,10 @@
 
         <div class="card" id="flowground">
             <div class="row">
-                <div class="col-lg-6 project-oppo">
+                <div class="col-lg-4 project-oppo">
                 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-8 push-lg-8">
                     <div class="row">
                         <div class="col-lg-8">
                             <h4>Banagazon</h4>
@@ -114,7 +117,7 @@
 
         <div class="card" id="maze_runner">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8 pull-lg-4">
                     <div class="row">
                         <div class="col-lg-8">
                             <h4>Brews Clues</h4>
@@ -128,7 +131,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 project-oppo">
+                <div class="col-lg-4 project-oppo">
 
                 </div>
             </div>
@@ -137,10 +140,10 @@
 
         <div class="card" id="squeasy">
             <div class="row">
-                <div class="col-lg-6 project-oppo">
+                <div class="col-lg-4 project-oppo">
                 
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-8 push-lg-8">
                     <div class="row">
                         <div class="col-lg-8">
                             <h4>Banagazon</h4>
@@ -160,18 +163,18 @@
 </div>
 
 
-<div class="contact-section section pb-2">
+<div class="contact-section section py-4">
     <div class="heading-div mx-auto">
         <h2 class="display-3 text-center mx-auto">Contact</h2>
     </div>
     <div class="container">
         <div class="contact-statemtent my-4 text-center">
-            <a href="mailto:michaellindstr@gmail.com" class="email-link">michaellindstr@gmail.com</a>
-            <div class="social-logos py-2">
+            <div class="social-logos pt-2 pb-4">
+                <%= link_to image_tag("emaillogo.png", alt: "github", height: '50px', width: '50px'), 'mailto:michaellindstr@gmail.com', class: 'navbar-brand' %>
                 <%= link_to image_tag("githublogo.png", alt: "github", height: '50px', width: '50px'), 'https://github.com/michaellindstromm', class: 'navbar-brand' %>
                 <%= link_to image_tag("linkedinlogo.png", alt: "github", height: '38px', width: '38px'), 'https://www.linkedin.com/in/michaelglindstrom', class: 'navbar-brand' %>
             </div>
-            <h5>Email me, get in contact through one of the links above, or send me a message below.</h5>
+            <h5>Contact me through one of the links above, or send me a message below.</h5>
         </div>
         <div id="contact">
             <%= render 'contact_form' %>

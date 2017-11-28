@@ -8,8 +8,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="mb-0" data-spy="scroll" data-target="#navbar">
-    <%= render 'shared/header' %>
-    <%= yield %>
+  <body class="mb-0" data-spy="scroll" data-target="#navbar" data-offset="300">
+      <%= render 'shared/header' %>
+      <%= yield %>
   </body>
 </html>

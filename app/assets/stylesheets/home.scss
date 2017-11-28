@@ -9,11 +9,17 @@ $secondary: #fc7a70;
 $secondary-light-accent: #FF968E;
 $secondary-dark-accent: #FF6C61;
 
-$background-offset: rgba(0, 0, 0, 0.1);
+$background-offset: rgb(230, 230, 230);
 
 body {
   color: black;
   position: relative;
+}
+
+.paral {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .row {
@@ -82,12 +88,12 @@ font-size: .8em;
 
 .transparent-nav {
     background-color: transparent;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .colored-nav {
     background-color: $primary;
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 
 .hidden {
@@ -104,13 +110,18 @@ font-size: .8em;
     margin-right: 5rem;
 }
 
+.nav-item > a.active {
+    border-radius: 3px;
+    background-color: $secondary-light-accent;
+}
+
 .jumbotron1 {
-    min-height: 800px;
+    min-height: 100vh;
     background-image: url("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Port_bg2.png");
 }
 
 .jumbotron2 {
-    min-height: 600px;
+    min-height: 800px;
     background-image: url("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Screen+Shot+2017-11-21+at+3.06.23+PM.png");
 }
 
@@ -122,11 +133,16 @@ font-size: .8em;
 
 .jumbo-phrase {
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 3.5s;
 }
 
 .hideme {
     opacity: 0;
+}
+
+hr {
+    width: 50%;
+    border-color: white;
 }
 
 .card {
@@ -134,18 +150,8 @@ font-size: .8em;
     border: none;
 }
 
-.footer {
-    background-color: $primary;
-}
-
-.paral {
-background-attachment: fixed;
-background-size: cover;
-background-position: 50% 50%;
-}
-
-.contact-section, .project-oppo {
-    background-color: $background-offset;
+.project-oppo {
+    background-color: inherit;
 }
 
 .email-link {
@@ -155,4 +161,8 @@ background-position: 50% 50%;
 
 .email-link:hover {
     color: inherit;
+}
+
+.footer {
+    background-color: $primary;
 }

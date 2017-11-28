@@ -201,3 +201,20 @@ hr {
 .flash-div {
     min-height: 100px;
 }
+
+.carousel,
+.carousel-item {
+    height: 100%;
+    margin-bottom: 60px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel,
+    .carousel-item {
+        min-height: 500px;
+    }
+}

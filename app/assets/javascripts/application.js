@@ -113,12 +113,19 @@ function smoothScroll() {
             }, 2000);
             return false;
             
-        } else {
+        } else if (target[0]["id"] == "projects") {
             
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 235
+                scrollTop: target.offset().top - 245
             }, 2000);
             return false;
+            
+        } else {
+
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 240
+                }, 2000);
+                return false;
 
         }
 

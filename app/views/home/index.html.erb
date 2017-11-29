@@ -10,14 +10,65 @@
 </div>
 
 <div class="about-section section w-100">
-    <div class="pb-4 heading-div mx-auto d-flex justify-content-center">
-        <h2 class="display-3 text-center">About</h2>
-    </div>
     <div class="container-fluid about" id="about">
         <div class="row m-0">
-            <div class="col-lg-2">
+            <div class="col-12 d-none d-block col-md-2">
+                <div class="left-icons icons-div d-none d-md-flex flex-column justify-content-around hidden-md-down">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/angular-icon.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/bootstrap.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/firebase.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/github-icon.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/grunt.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/heroku.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/ionic.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-12 col-md-8">
+                <div class="row pb-4 heading-div mx-auto d-flex justify-content-center">
+                    <h2 class="display-3 text-center">About</h2>
+                </div>
                 <div class="row mx-auto">
                     <div class="text-center col-lg-12">
                         <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '40%', class: "portfolio-pic") %>
@@ -27,7 +78,7 @@
                     <div class="col-lg-12 mx-auto">
                         <div class="text-justify">
                             <h5 class="about-me py-4 mx-4">Hello there! If you are wondering who Michael Lindstrom is, well here's a face for the name. I am a recent graduate from the Nashville Software School, an intensive, full-stack, 6-month development bootcamp. I have always been passionate about practical solutions to everyday problems, and software development has given me an outlet to solve such problems.</h5>
-                            <h4 class="text-center">Check out some of my work below.</h4>
+                            <h4 class="text-center pt-4">Check out some of my work below.</h4>
                             <div class="row mx-auto d-flex justify-content-center">
                                <a class="smooth-scroll nav-link" href="#projects"><%= image_tag("downarrow.png", alt: "downarrow", width: "50px", height: "50px", class: "text-center") %></a>
                             </div>
@@ -35,7 +86,58 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-12 d-none d-block col-md-2">
+                <div class="right-icons icons-div d-none d-md-flex flex-column justify-content-around hidden-md-down">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/javascript.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/jquery.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/lodash.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/rails.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/ruby.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/sass.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/sqlite.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

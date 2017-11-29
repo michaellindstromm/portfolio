@@ -46,27 +46,34 @@ $(window).on('load', function() {
         }, 1500);
         
         setTimeout(function() {
+
             $('#jumbo-name').removeClass('hideme');
             $('#jumbo-name').addClass('jumbo-name');
-        }, 3000);
-        
-        setTimeout(function() {
+
             $('#jumbo-horizontal').removeClass('hideme');
             $('#jumbo-horizontal').addClass('jumbo-phrase');
 
+        }, 3000);
+        
+        setTimeout(function() {
+
             $('#jumbo-phrase').removeClass('hideme');
             $('#jumbo-phrase').addClass('jumbo-phrase');
+
+            $('body').removeClass('stop-scrolling');
+            $('body').unbind('touchmove')
+
         }, 4500);
 
         setTimeout(function() {
-            // $('body').removeClass('stop-scrolling');
-            $('body').unbind('touchmove')
-            $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6)}, 2000);
         }, 6000);
-
+        
         setTimeout(function() {
             $('.jumbo-arrow').removeClass('hideme');
             $('.jumbo-arrow').addClass('jumbo-phrase');
+            if ($('html, body').scrollTop() == 0) {
+                $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6)}, 2000);
+            }
         }, 8000)
 
     }, 1000);
@@ -98,11 +105,12 @@ function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
 
         var target = $(this.hash);
+        var navbarHeight = $('#navbar').height();
 
         if (target[0]["id"] == "about") {
 
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 218
+                scrollTop: target.offset().top - navbarHeight * 1.5
             }, 2000);
             return false;
 

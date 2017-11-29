@@ -9,7 +9,8 @@ $secondary: #fc7a70;
 $secondary-light-accent: #FF968E;
 $secondary-dark-accent: #FF6C61;
 
-$background-offset: rgb(244, 244, 244);
+$background-offset: rgb(245, 245, 245);
+$background-dark-offset: #161616;
 
 body {
   color: black;
@@ -110,9 +111,9 @@ font-size: .8em;
     margin-right: 5rem;
 }
 
-.nav-item > a.active {
-    background-color: $secondary;
-}
+// .nav-item > a.active {
+//     background-color: $secondary;
+// }
 
 .jumbotron1 {
     min-height: 100vh;
@@ -146,6 +147,10 @@ hr {
 
 .section {
     height: 100vh;
+}
+
+.contact-section {
+    height: 92vh;
 }
 
 .card {
@@ -212,9 +217,20 @@ hr {
     height: 100%;
 }
 
+.icons-div {
+    height: 100%;
+}
+
 @media (min-width: 768px) {
     .carousel,
     .carousel-item {
         min-height: 500px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+    .icon-svg {
+        max-height: 50px;
+        max-width: 50px;
     }
 }

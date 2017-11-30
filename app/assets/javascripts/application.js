@@ -130,10 +130,10 @@ function smoothScroll() {
             
         } else {
 
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top - 240
-                }, 2000);
-                return false;
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 240
+            }, 2000);
+            return false;
 
         }
 

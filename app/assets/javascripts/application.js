@@ -83,18 +83,17 @@ $(window).on('load', function() {
 
 
 function ready() {
+    $(".test-holder-div").hide();
+    $(".test-holder-image").hide();
+    
+    
+    $(".test-holder-div").show();
+    $(".test-holder-image").show();
     $(document).ready(function() {
-
-        $('body').bind('touchmove', function (e) { e.preventDefault() })
         
         $(".nav-logo").hide();
-        $(".test-holder-div").hide();
-        $(".test-holder-image").hide();
-
+        $('body').bind('touchmove', function (e) { e.preventDefault() })
         
-        $(".test-holder-div").show();
-        $(".test-holder-image").show();
-
     });
 }
 

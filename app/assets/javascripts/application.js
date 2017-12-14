@@ -35,6 +35,8 @@ $(window).on('load', function() {
 
     setTimeout(function() {
 
+        $('.test-holder-image').addClass('off');
+
         $(".test-holder-image").fadeOut(2000);
 
         $(".test-holder-div").addClass("no-height");

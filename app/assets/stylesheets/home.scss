@@ -21,6 +21,11 @@ img.test-holder-image {
 		-webkit-animation: bounce 2s infinite linear;
 }
 
+img.test-holder-image.off {
+    -webkit-animation: none;
+    transition: -webkit-animation 1s ease-out;
+}
+
 @-moz-keyframes bounce {
         0%{ -moz-transform:scale(0); opacity:0;}
         50%{ -moz-transform:scale(1.3); opacity:0.4; }

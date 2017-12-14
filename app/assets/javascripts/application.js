@@ -14,6 +14,7 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require pace
 //= require_tree .
 
 $(window).scroll(function() {
@@ -93,8 +94,6 @@ function ready() {
         
         $(".test-holder-div").show();
         $(".test-holder-image").show();
-
-        $(this).scrollTop(0);
 
     });
 }

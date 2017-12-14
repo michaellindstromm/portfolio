@@ -83,14 +83,15 @@ $(window).on('load', function() {
 
 
 function ready() {
+
     $(".test-holder-div").hide();
     $(".test-holder-image").hide();
     
-    
     $(".test-holder-div").show();
     $(".test-holder-image").show();
+
     $(document).ready(function() {
-        
+        $(this).scrollTop(0);
         $(".nav-logo").hide();
         $('body').bind('touchmove', function (e) { e.preventDefault() })
         
@@ -141,6 +142,7 @@ function smoothScroll() {
 // $('.about-down').on('click', function() {
 //     $('html, body').animate({ scrollTop: $('.project-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .5) }, 2000);
 // });
+
 
 setTimeout(smoothScroll, 0);
 ready();

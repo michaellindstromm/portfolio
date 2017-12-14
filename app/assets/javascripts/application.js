@@ -32,10 +32,11 @@ $(window).scroll(function() {
 });
 
 $(window).on('load', function() {
+    
+    $('.test-holder-image').addClass('off');
 
     setTimeout(function() {
 
-        $('.test-holder-image').addClass('off');
 
         $(".test-holder-image").fadeOut(2000);
 

@@ -85,22 +85,21 @@ $(window).on('load', function() {
     $(document).scrollTop(0);
 
     $('.test-holder-image').addClass('off');
-
-    setTimeout(function() {
+    setTimeout(function () {
 
 
         $(".test-holder-image").fadeOut(2000);
 
         $(".test-holder-div").addClass("no-height");
-        
-        
-        setTimeout(function() {
+
+
+        setTimeout(function () {
             $(".test-holder-image").hide();
 
             $(".nav-logo").fadeIn(2000);
         }, 1500);
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
 
             $('#jumbo-name').removeClass('hideme');
             $('#jumbo-name').addClass('jumbo-name');
@@ -109,38 +108,38 @@ $(window).on('load', function() {
             $('#jumbo-horizontal').addClass('jumbo-phrase');
 
         }, 3000);
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
 
             $('#jumbo-phrase').removeClass('hideme');
             $('#jumbo-phrase').addClass('jumbo-phrase');
 
-            $('body').removeClass('stop-scrolling');
-            $('body').unbind('touchmove')
+            // $('body').removeClass('stop-scrolling');
+            $('body').unbind('touchmove');
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.jumbophrase1').removeClass('hideme');
             }, 100);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.jumbophrase2').removeClass('hideme');
             }, 150);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.jumbophrase3').removeClass('hideme');
             }, 200);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.jumbophrase4').removeClass('hideme');
             }, 250);
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.jumbophrase5').removeClass('hideme');
             }, 300);
 
         }, 4500);
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.jumbo-arrow').removeClass('hideme');
             $('.jumbo-arrow').addClass('jumbo-phrase');
             if ($('html, body').scrollTop() == 0) {
-                $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6)}, 2000);
+                $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6) }, 2000);
             }
         }, 7000)
 

@@ -168,7 +168,6 @@ function ready() {
 
 function modals() {
     $('.project-div').on('click', function(e) {
-        $('#myModal').modal();
         id = $(this).attr('id');
         project = projectInfo[id]
         $('.modal-title').text(project.header);
@@ -202,6 +201,7 @@ function modals() {
                 $('.site-links').append(`<small class="ml-4"><a href='${item.link}'>${item.link}</a></small>`);
             }
         });
+        $('#myModal').modal();
     });
 };
 

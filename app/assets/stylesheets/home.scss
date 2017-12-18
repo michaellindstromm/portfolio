@@ -228,6 +228,10 @@ font-size: .8em;
     display: none;
 }
 
+.navbar {
+    min-height: 74px;
+}
+
 .navbar-brand {
     width: 50px;
     margin: 0;
@@ -276,9 +280,9 @@ hr {
     height: 100%;
 }
 
-.contact-section {
-    height: 92vh;
-}
+// .contact-section {
+//     height: 92vh;
+// }
 
 .card {
     width: 95%;
@@ -345,7 +349,7 @@ hr {
 
 .project-section {
     height: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     background-color: $background-offset;
 }
 

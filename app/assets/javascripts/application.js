@@ -17,7 +17,7 @@
 //= require pace
 //= require_tree .
 
-let projectInfo = {
+var projectInfo = {
     olympicapi: {
         header: "Olympic API",
         description: "olympic api description",

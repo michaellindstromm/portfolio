@@ -20,26 +20,49 @@
 var projectInfo = {
     olympicapi: {
         header: "Olympic API",
-        description: "olympic api description",
-        development: "olympic api development info.",
+        development: "The Olympic API allows developers to access historical olympic data from 1896 - 2014. The API was built with Ruby on Rails, and architected strictly around REST principles. Users can sign up, which grants access by way of JSON Web Tokens. Full documentation is provided including endpoints, error handling, access, and a dedicated try server. The try server allows for real time requests to the database.",
         img: ["olympicapi.png"],
-        tech: ["heroku.svg", "jquery.svg", "ruby.svg", "rails.svg", "postgresql.svg", "bootstrap.svg"]
+        tech: ["heroku.svg", "jquery.svg", "ruby.svg", "rails.svg", "postgresql.svg", "bootstrap.svg"], 
+        links: [
+            {
+                img: "github-icon.svg",
+                link: "https://github.com/michaellindstromm/olympic-api"
+            }, 
+            {
+                img: "olympic_rings.png",
+                link: "https://olympicapi.herokuapp.com"
+            }
+        ]
     }, 
 
     mazerunner: {
         header: "Maze Runner",
-        description: "maze runner description",
-        development: "maze runner development info.",
+        development: "Maze Runner is a simple maze solver game. Built using javascript, p5.js, and canvas, the premis of the game is to race a simple computer AI to the gem hidden somewhere in the maze. Upon entry players are able to see the maze being generated through a recursive function and backtracking through a stack. After completion players choose their difficulty level, press play, and the race is on!",
         img: ["mazerunner.png"],
-        tech: ["surge.svg", "jquery.svg", "bootstrap.svg", "https://blindedcyclops.neocities.org/p5js-icons/p5-sq-white-background.svg"]
+        tech: ["surge.svg", "jquery.svg", "bootstrap.svg", "https://blindedcyclops.neocities.org/p5js-icons/p5-sq-white-background.svg"],
+        links: [
+            {
+                img: "github-icon.svg",
+                link: "https://github.com/michaellindstromm/maze-generation"
+            }, 
+            {
+                img: "mazeicon.png",
+                link: "http://amazeing-runner.surge.sh/"
+            }
+        ]
     },
 
     brewsclues: {
         header: "Brews Clues",
-        description: "brews clues description",
-        development: "brews clues development info",
+        development: `Brews Clues is an app built to help beer consumers make choices about which beer they should drink next. The app was built using AngularJS, Ionic1, and Firebase. Upon first use, users register and then rate a preselected list of beers in order to create a baseline rating of different types of beers. All beer information is obtained from the BreweryDB API. Using a custom kNN (k Nearest Neighbors) formula, users scan a QR Code which contains a menu of beers. After scanning, beers on the menu are compared to beers users have already rated, and information is passed through the formula to give the users five beer suggestions from the menu.`,
         img: ["brewsclues1.PNG", "brewsclues2.PNG"],
-        tech: ["angular-icon.svg", "ionic.svg", "jquery.svg", "firebase.svg"]
+        tech: ["angular-icon.svg", "ionic.svg", "jquery.svg", "firebase.svg"],
+        links: [
+            {
+                img: "github-icon.svg",
+                link: "https://github.com/michaellindstromm/brews-clues"
+            }
+        ]
     }
 }
 
@@ -95,18 +118,31 @@ $(window).on('load', function() {
             $('body').removeClass('stop-scrolling');
             $('body').unbind('touchmove')
 
+            setTimeout(function() {
+                $('.jumbophrase1').removeClass('hideme');
+            }, 100);
+            setTimeout(function() {
+                $('.jumbophrase2').removeClass('hideme');
+            }, 150);
+            setTimeout(function() {
+                $('.jumbophrase3').removeClass('hideme');
+            }, 200);
+            setTimeout(function() {
+                $('.jumbophrase4').removeClass('hideme');
+            }, 250);
+            setTimeout(function() {
+                $('.jumbophrase5').removeClass('hideme');
+            }, 300);
+
         }, 4500);
 
-        setTimeout(function() {
-        }, 6000);
-        
         setTimeout(function() {
             $('.jumbo-arrow').removeClass('hideme');
             $('.jumbo-arrow').addClass('jumbo-phrase');
             if ($('html, body').scrollTop() == 0) {
                 $('html, body').animate({ scrollTop: $('.about-section').offset().top - ($('#navbar').height() + $('#navbar').height() * .6)}, 2000);
             }
-        }, 8000)
+        }, 7000)
 
     }, 1000);
 
@@ -144,7 +180,6 @@ function modals() {
                 $('.modal-img-lg').append(`<img src='assets/${item}' class='mx-auto modal-brews-img'></img>`);
             }
         });
-        $('.modal-p-description').text(project.description);
         $('.modal-p-development').text(project.development);
         $('.tech-imgs').html('');
         $(project.tech).each((index, item) => {
@@ -153,6 +188,18 @@ function modals() {
 
             } else {
                 $('.tech-imgs').append(`<img src= 'assets/icons/${item}' class="tech-img"></img>`);
+            }
+        });
+
+        $('.github-links').html('');
+        $('.site-links').html('');
+        $(project.links).each((index, item) => {
+            if (index === 0) {
+                $('.github-links').append(`<a href='${item.link}'><img src= 'assets/icons/${item.img}' class="tech-img"></img></a>`);
+                $('.github-links').append(`<small class="ml-4"><a href='${item.link}'>${item.link}</a></small>`);
+            } else {
+                $('.site-links').append(`<a href='${item.link}'><img src= 'assets/icons/${item.img}' class="tech-img"></img></a>`);
+                $('.site-links').append(`<small class="ml-4"><a href='${item.link}'>${item.link}</a></small>`);
             }
         });
     });

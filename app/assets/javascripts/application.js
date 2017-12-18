@@ -17,6 +17,32 @@
 //= require pace
 //= require_tree .
 
+let projectInfo = {
+    olympicapi: {
+        header: "Olympic API",
+        description: "olympic api description",
+        development: "olympic api development info.",
+        img: ["olympicapi.png"],
+        tech: ["heroku.svg", "jquery.svg", "ruby.svg", "rails.svg", "postgresql.svg", "bootstrap.svg"]
+    }, 
+
+    mazerunner: {
+        header: "Maze Runner",
+        description: "maze runner description",
+        development: "maze runner development info.",
+        img: ["mazerunner.png"],
+        tech: ["surge.svg", "jquery.svg", "bootstrap.svg", "https://blindedcyclops.neocities.org/p5js-icons/p5-sq-white-background.svg"]
+    },
+
+    brewsclues: {
+        header: "Brews Clues",
+        description: "brews clues description",
+        development: "brews clues development info",
+        img: ["brewsclues1.PNG", "brewsclues2.PNG"],
+        tech: ["angular-icon.svg", "ionic.svg", "jquery.svg", "firebase.svg"]
+    }
+}
+
 $(window).scroll(function() {
 
     var navbarHeight = $('#navbar').height();
@@ -32,7 +58,9 @@ $(window).scroll(function() {
 });
 
 $(window).on('load', function() {
-    
+
+    $(document).scrollTop(0);
+
     $('.test-holder-image').addClass('off');
 
     setTimeout(function() {
@@ -86,22 +114,49 @@ $(window).on('load', function() {
 
 
 function ready() {
+    $(document).scrollTop(0);
 
     $(".test-holder-div").hide();
     $(".test-holder-image").hide();
     
     $(".test-holder-div").show();
     $(".test-holder-image").show();
-
+    
     $(document).ready(function() {
         $(this).scrollTop(0);
-        $(".nav-logo").hide();
+        // $(".nav-logo").hide();
         $('body').bind('touchmove', function (e) { e.preventDefault() })
-        
+        modals();
     });
 }
 
+function modals() {
+    $('.project-div').on('click', function(e) {
+        $('#myModal').modal();
+        id = $(this).attr('id');
+        project = projectInfo[id]
+        $('.modal-title').text(project.header);
+        $('.modal-img-lg').html('');
+        $(project.img).each((index, item) => {
+            if (id !== 'brewsclues') {
+                $('.modal-img-lg').append(`<img src='assets/${item}' class='modal-img mx-auto'></img>`);
+            } else {
+                $('.modal-img-lg').append(`<img src='assets/${item}' class='mx-auto modal-brews-img'></img>`);
+            }
+        });
+        $('.modal-p-description').text(project.description);
+        $('.modal-p-development').text(project.development);
+        $('.tech-imgs').html('');
+        $(project.tech).each((index, item) => {
+            if (item.length > 25) {
+                $('.tech-imgs').append(`<img src= '${item}' class="tech-img"></img>`);
 
+            } else {
+                $('.tech-imgs').append(`<img src= 'assets/icons/${item}' class="tech-img"></img>`);
+            }
+        });
+    });
+};
 
 function smoothScroll() {
     $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
@@ -119,14 +174,14 @@ function smoothScroll() {
         } else if (target[0]["id"] == "contact") {
 
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 350
+                scrollTop: target.offset().top - 340
             }, 2000);
             return false;
             
         } else if (target[0]["id"] == "projects") {
             
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 245
+                scrollTop: target.offset().top - 210
             }, 2000);
             return false;
             

@@ -1,4 +1,4 @@
-<div class="jumbotron jumbotron-fluid paral jumbotron1 d-flex align-items-center section">
+<div class="jumbotron jumbotron-fluid paral jumbotron1 d-flex align-items-center">
     <div class="container jumbo-content">
         <h1 class="display-1 text-white text-center hideme" id="jumbo-name">Michael Lindstrom</h1>
         <hr class="mx-auto hideme" id="jumbo-horizontal">
@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<div class="about-section section w-100">
+<div class="about-section section w-100 my-4 py-4">
     <div class="container-fluid about" id="about">
         <div class="row m-0">
             <div class="col-12 d-none d-block col-md-2">
@@ -39,7 +39,7 @@
                         <div class="col-12 col-lg-6">
                         </div>
                         <div class="col-12 col-lg-6">
-                            <%= image_tag("icons/github-icon.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                            <%= image_tag("icons/sqlite.svg", height: "100%", width: "100%", class: "icon-svg")%>
                         </div>
                     </div>
                     <div class="row">
@@ -63,11 +63,18 @@
                         <div class="col-12 col-lg-6">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("icons/github-icon.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-8">
-                <div class="row pb-4 heading-div mx-auto d-flex justify-content-center">
-                    <h2 class="display-3 text-center">About</h2>
+                <div class="heading-div mx-auto d-flex justify-content-center mb-4">
+                    <h2 class="display-3 text-center mx-auto section-header">About</h2>
                 </div>
                 <div class="row mx-auto">
                     <div class="text-center col-lg-12">
@@ -134,7 +141,14 @@
                         <div class="col-12 col-lg-6">
                         </div>
                         <div class="col-12 col-lg-6">
-                            <%= image_tag("icons/sqlite.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                            <%= image_tag("icons/surge.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <%= image_tag("https://blindedcyclops.neocities.org/p5js-icons/p5-sq-white-background.svg", height: "100%", width: "100%", class: "icon-svg")%>
+                        </div>
+                        <div class="col-12 col-lg-6">
                         </div>
                     </div>
                 </div>
@@ -143,227 +157,105 @@
     </div>
 </div>
 
-<%# <div class="jumbotron jumbotron-fluid paral jumbotron2 d-flex align-items-center mb-0 section">
-  <div class="container jumbo-content">
-        <h3 class="text-white text-center mt-4 hideme" id="jumbo2-saying">"Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."</h3>
-        <hr class="mx-auto hideme" id="jumbo2-horizontal">
-        <h4 class="text-white text-center hideme" id="jumbo2-quoter">- Linus Torvald</h4>
-  </div>
-</div> %>
 
 <div class="project-section section ml-0 mr-0 py-4">
-    <div class="pb-4 heading-div mx-auto d-flex justify-content-center pt-2">
-        <h2 class="display-3 text-center mx-auto">Projects</h2>
+    <div class="heading-div mx-auto d-flex justify-content-center">
+        <h2 class="display-3 text-center mx-auto section-header">Projects</h2>
     </div>
-    <div class="container projects mt-4" id="projects">
-
-        <div id="carouselExampleControls" class="carousel slide project-carousel" data-interval="false">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active c-item0">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 carousel-item1-info-div">
-                                <h3>Squeasy</h3>
-
-                                <p class="text-justify">Squeasy is an automated schedule maker app. It allows employers and managers to input employee hours, requests, and preferences and will automate the schedule making process.</p>
-                            </div>
-                            <div class="col-md-4 carousel-item1-image-div">
-                                <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '100%', class: "portfolio-pic") %>
-                            </div>
-                        </div>
+    <div class="container-fluid projects mt-4 px-0" id="projects">
+        <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title display-3 text-center mx-auto mb-4" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-                <div class="carousel-item c-item1">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 carousel-item1-info-div">
-                            
+                    <div class="modal-body d-flex justify-content-around mx-auto container-fluid">
+                        <div class="modal-imgs-div d-flex flex-column col-lg-8">
+                            <div class="modal-img-lg d-flex justify-content-around">
+                                
                             </div>
-                            <div class="col-md-4 carousel-item1-image-div">
-                                <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '100%', class: "portfolio-pic") %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item c-item2">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 carousel-item1-info-div">
-                            
-                            </div>
-                            <div class="col-md-4 carousel-item1-image-div">
-                                <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '100%', class: "portfolio-pic") %>
+                            <div class="modal-tech-imgs">
+                                <h3 class="text-center mt-4">Technology</h3>
+                                <div class="tech-imgs d-flex justify-content-around"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="carousel-item c-item3">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 carousel-item1-info-div">
-                            
+                        <div class="modal-about d-flex flex-column justify-content-between col-lg-4">
+                            <div class="modal-description abouts">
+                                <h3>Description</h3>
+                                <p class="modal-p-description"></p>
                             </div>
-                            <div class="col-md-4 carousel-item1-image-div">
-                                <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '100%', class: "portfolio-pic") %>
+                            <div class="modal-development abouts">
+                                <h3>Development</h3>
+                                <p class="modal-p-development"></p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item c-item4">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 carousel-item1-info-div">
-                            
-                            </div>
-                            <div class="col-md-4 carousel-item1-image-div">
-                                <%= image_tag("https://s3.us-east-2.amazonaws.com/portfoliomichaellindstrom/Portfolio_Picture.png", alt: "logo", height: '100%', width: '100%', class: "portfolio-pic") %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div class="row mx-auto d-flex justify-content-center">
-            <a class="smooth-scroll nav-link" href="#contact"><%= image_tag("downarrow.png", alt: "downarrow", width: "50px", height: "50px", class: "text-center") %></a>
-        </div>
-
-        <%# <div class="card" id="banagazon">
-            <div class="row">
-                <div class="col-lg-4 project-oppo bg-dark">
-                
-                </div>
-                <div class="col-lg-8 push-lg-4">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h4>Banagazon</h4>
-                            <p>Stuff about our banagazon site.<p>
-                            <a>Link to site</a> | 
-                            <a>Link to repo</a>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="card" id="brews_clues">
-            <div class="row">
-                <div class="col-lg-8 pull-lg-4">
-                    <div class="container">
-                        <div class="row d-flex">
-                            <div class="col-lg-8 flex-last">
-                                <h4>Brews Clues</h4>
-                                <p>Stuff about brews clues site.<p>
-                                <a>Link to site</a> | 
-                                <a>Link to repo</a>
+        <div class="row mx-auto">
+            <div class="col-md-6 mx-auto project-div" id="olympicapi">
+                <div class="project-overlay d-flex justify-content-center align-items-center">
+                    <h2 class="display-4 text-center text-white">Olympic API</h2>
+                </div>
+                <div class="card mx-auto olympic-api-card">
+                    <%= image_tag('olympicapi.png', class: 'card-img-top', atl: 'Olympic API Image')%>
+                    <%# <div class="card-block mt-4">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div> %>
+                </div>    
+            </div>
+            <div class="col-md-6 mx-auto project-div" id="mazerunner">
+                <div class="project-overlay d-flex justify-content-center align-items-center">
+                    <h2 class="display-4 text-center text-white">MazeRunner</h2>
+                </div>
+                <div class="card mx-auto maze-runner-card">
+                    <%= image_tag('mazerunner.png', class: 'card-img-top', atl: 'Maze Runner Image')%>
+                    <%# <div class="card-block mt-4">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div> %>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto project-div" id="brewsclues">
+                <div class="project-overlay d-flex justify-content-center align-items-center">
+                    <h2 class="display-4 text-center text-white">Brews Clues</h2>
+                </div>
+                <div class="card mx-auto brews-clues-card">
+                    <div class="card-img-top d-flex justify-content-center">
+                        <%= image_tag('brewsclues1.PNG', atl: 'Brues Clues Image', width: '32%', height: '31%', class: 'mr-4')%>
+                        <%= image_tag('brewsclues2.PNG', atl: 'Brues Clues Image', width: '32%', height: '31%', class: 'ml-4')%>
+                    </div>
+                    <%# <div class="card-block mt-4">
+                        <div class="card-text mx-auto col-10">
+                            <div class="description">
+                                <h6 class="lead font-weight-bold">Description</h6>
+                                <p>The inspiration behind the app is to give beer suggestions to users when they are unable to choose for themselves. The experience starts when a user signs up, and is given a list of beers to rate between 0 and 100. After the baseline is determined users can add beers and rate them by searching for beers by name. If a user wants suggestions for which beer </p>
                             </div>
-                            <div class="col-lg-4 flex-first">
-                                <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
+                            <div class="development-description">
+                                <h6 class="lead font-weight-bold">Development</h6>
+                                <p>Brews Clues is built with AngularJS, Ionic1, and Firebase. </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 project-oppo bg-dark">
-
+                    </div> %>
                 </div>
             </div>
         </div>
 
 
-        <div class="card" id="flowground">
-            <div class="row">
-                <div class="col-lg-4 project-oppo bg-dark">
-                
-                </div>
-                <div class="col-lg-8 push-lg-8">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h4>Banagazon</h4>
-                            <p>Stuff about our banagazon site.<p>
-                            <a>Link to site</a> | 
-                            <a>Link to repo</a>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card" id="maze_runner">
-            <div class="row">
-                <div class="col-lg-8 pull-lg-4">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <h4>Brews Clues</h4>
-                                <p>Stuff about brews clues site.<p>
-                                <a>Link to site</a> | 
-                                <a>Link to repo</a>
-                            </div>
-                            <div class="col-lg-4 flex-first">
-                                <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 project-oppo bg-dark">
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card" id="squeasy">
-            <div class="row">
-                <div class="col-lg-4 project-oppo bg-dark">
-                
-                </div>
-                <div class="col-lg-8 push-lg-8">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h4>Banagazon</h4>
-                            <p>Stuff about our banagazon site.<p>
-                            <a>Link to site</a> | 
-                            <a>Link to repo</a>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" class="w-100"></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> %>
-
+    </div>
+    <div class="row mx-auto d-flex justify-content-center mt-4">
+        <a class="smooth-scroll nav-link" href="#contact"><%= image_tag("downarrow.png", alt: "downarrow", width: "50px", height: "50px", class: "text-center") %></a>
     </div>
 </div>
 
 
 <div class="contact-section section py-4 w-100 container-fluid mx-auto">
     <div class="heading-div mx-auto d-flex justify-content-center">
-        <h2 class="display-3 text-center mx-auto">Contact</h2>
+        <h2 class="display-3 text-center mx-auto section-header">Contact</h2>
     </div>
     <div class="container">
         <div class="contact-statemtent my-4 text-center">

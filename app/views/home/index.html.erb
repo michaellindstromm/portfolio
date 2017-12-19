@@ -173,26 +173,28 @@
                         </button>
                     </div>
                     <div class="modal-body d-flex justify-content-around mx-auto container-fluid">
-                        <div class="modal-imgs-div d-flex flex-column col-lg-8">
-                            <div class="modal-img-lg d-flex justify-content-around">
-                                
+                        <div class="row">
+                            <div class="modal-imgs-div d-flex flex-column col-lg-8 col-12">
+                                <div class="modal-img-lg d-flex justify-content-around">
+                                    
+                                </div>
+                                <div class="modal-tech-imgs">
+                                    <h3 class="text-center mt-4">Technology</h3>
+                                    <div class="tech-imgs d-flex justify-content-around"></div>
+                                </div>
                             </div>
-                            <div class="modal-tech-imgs">
-                                <h3 class="text-center mt-4">Technology</h3>
-                                <div class="tech-imgs d-flex justify-content-around"></div>
-                            </div>
-                        </div>
-                        <div class="modal-about d-flex flex-column justify-content-between col-lg-4">
-                            <div class="modal-development abouts">
-                                <h3>Development</h3>
-                                <p class="modal-p-development lead"></p>
-                                <h3 class="mt-4">Links</h3>
-                                <div class="live-links d-flex flex-column">
-                                    <div class="github-links my-4">
+                            <div class="modal-about d-flex flex-column justify-content-between col-lg-4 col-12">
+                                <div class="modal-development abouts">
+                                    <h3>Development</h3>
+                                    <p class="modal-p-development lead"></p>
+                                    <h3 class="mt-4">Links</h3>
+                                    <div class="live-links d-flex flex-column">
+                                        <div class="github-links my-4">
 
-                                    </div>
-                                    <div class="site-links">
+                                        </div>
+                                        <div class="site-links">
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -209,9 +211,6 @@
                 </div>
                 <div class="card mx-auto olympic-api-card">
                     <%= image_tag('olympicapi.png', class: 'card-img-top', atl: 'Olympic API Image')%>
-                    <%# <div class="card-block mt-4">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div> %>
                 </div>    
             </div>
             <div class="col-md-6 mx-auto project-div" id="mazerunner">
@@ -220,9 +219,6 @@
                 </div>
                 <div class="card mx-auto maze-runner-card">
                     <%= image_tag('mazerunner.png', class: 'card-img-top', atl: 'Maze Runner Image')%>
-                    <%# <div class="card-block mt-4">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div> %>
                 </div>
             </div>
             <div class="col-md-6 mx-auto project-div" id="brewsclues">
@@ -234,18 +230,6 @@
                         <%= image_tag('brewsclues1.PNG', atl: 'Brues Clues Image', width: '32%', height: '31%', class: 'mr-4')%>
                         <%= image_tag('brewsclues2.PNG', atl: 'Brues Clues Image', width: '32%', height: '31%', class: 'ml-4')%>
                     </div>
-                    <%# <div class="card-block mt-4">
-                        <div class="card-text mx-auto col-10">
-                            <div class="description">
-                                <h6 class="lead font-weight-bold">Description</h6>
-                                <p>The inspiration behind the app is to give beer suggestions to users when they are unable to choose for themselves. The experience starts when a user signs up, and is given a list of beers to rate between 0 and 100. After the baseline is determined users can add beers and rate them by searching for beers by name. If a user wants suggestions for which beer </p>
-                            </div>
-                            <div class="development-description">
-                                <h6 class="lead font-weight-bold">Development</h6>
-                                <p>Brews Clues is built with AngularJS, Ionic1, and Firebase. </p>
-                            </div>
-                        </div>
-                    </div> %>
                 </div>
             </div>
         </div>
@@ -265,9 +249,9 @@
     <div class="container">
         <div class="contact-statemtent my-4 text-center">
             <div class="social-logos pt-2 pb-4">
-                <%= link_to image_tag("emaillogo.png", alt: "github", height: '50px', width: '50px'), 'mailto:michaellindstr@gmail.com', class: 'navbar-brand' %>
-                <%= link_to image_tag("githublogo.png", alt: "github", height: '50px', width: '50px'), 'https://github.com/michaellindstromm', class: 'navbar-brand' %>
-                <%= link_to image_tag("linkedinlogo.png", alt: "github", height: '38px', width: '38px'), 'https://www.linkedin.com/in/michaelglindstrom', class: 'navbar-brand' %>
+                <%= link_to image_tag("emaillogo.png", alt: "email", height: '50px', width: '50px'), 'mailto:michaellindstr@gmail.com', class: 'navbar-brand' %>
+                <%= link_to image_tag("githublogo.png", alt: "github", height: '50px', width: '50px', class: 'ml-1'), 'https://github.com/michaellindstromm', class: 'navbar-brand' %>
+                <%= link_to image_tag("linkedinlogo.png", alt: "linkedin", height: '38px', width: '38px'), 'https://www.linkedin.com/in/michaelglindstrom', class: 'navbar-brand' %>
             </div>
             <h5>Contact me through one of the links above, or send me a message below.</h5>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>Michael Lindstrom</title>
     <%= favicon_link_tag 'logo.png' %>
     <%= csrf_meta_tags %>
 
@@ -10,10 +10,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="mb-0" data-spy="scroll" data-target="#navbar" data-offset="400" id="top">
+  <body class="mb-0 stop-scrolling" data-spy="scroll" data-target="#navbar" data-offset="400" id="top">
       <%= render 'shared/header' %>
       <div class="test-holder-div d-flex align-items-center justify-content-center mx-auto">
-          <%= image_tag("logo.png", alt: "logo", height: "100px", width: "100px", class: "test-holder-image") %>
+          <%= image_tag("logo.png", alt: "logo", height: "100px", width: "100px", class: "test-holder-image mx-auto") %>
       </div>
       <%= yield %>
   </body>

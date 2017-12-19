@@ -1,4 +1,4 @@
-<%= form_for @contact, :url => home_index_path, :method => :post, :remote => false do |f| %>
+<%= form_for @contact, :url => home_index_path, :method => :post, :remote => true do |f| %>
     <div class="col-md-8 mx-auto">
         <%= f.label :name %></br>
         <%= f.text_field  :name, required: true, class: "contact-form-text-area form-control" %></br>
@@ -18,7 +18,7 @@
     </div>
 <% end %>
 
-<div class="col-md-6 mx-auto pt-4 mb-0" id="flash-message">
+<div class="col-md-6 mx-auto pt-4 mb-4" id="flash-message">
     <div class="hidden">Thanks for Visiting!</div>
     <%= render 'flash' %>
 </div>
